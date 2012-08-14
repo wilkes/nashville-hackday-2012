@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=1024, user-scalable=no">
+
+        <title>Functional programming</title>
+
+        <!-- Required stylesheet -->
+        <link rel="stylesheet" href="core/deck.core.css">
+
+        <!-- Extension CSS files go here. Remove or add as needed. -->
+        <link rel="stylesheet" href="extensions/goto/deck.goto.css">
+        <link rel="stylesheet" href="extensions/menu/deck.menu.css">
+        <link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+        <link rel="stylesheet" href="extensions/status/deck.status.css">
+        <link rel="stylesheet" href="extensions/hash/deck.hash.css">
+        <link rel="stylesheet" href="extensions/scale/deck.scale.css">
+
+        <!-- Style theme. More available in /themes/style/ or create your own. -->
+        <link rel="stylesheet" href="themes/style/swiss.css">
+
+        <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+        <link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+
+        <!-- Required Modernizr file -->
+        <script src="modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide">
+        <h1>Functional Programming</h1>
+</section>
+
+<section class="slide">
+  <h1>What is it?</h1>
+</section>
+
+<section class="slide">
+  <h2>It's about values</h2>
+  <ul>
+    <li>collections</li>
+    <li>records / types</li>
+    <li>scalars (int, float, char, etc.)</li>
+    <li>functions!</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Values lead to expressions</h2>
+  <ul>
+    <li>double(x) = x * 2</li>
+    <li>double(4) = 4 * 2</li>
+    <li>double(4) = 8</li>
+    <li>8</li>
+  </ul>
+</section>
+
+
+<section class="slide">
+  <h2>Functions as values lead to higher-order functions</h2>
+  <ul>
+    <li>multiply-by(n) = \x -> x * n</li>
+    <li>double = multiply-by(2)</li>
+    <li>map(double, [1,2,3]) = [double(1), double(2), double(3)]</li>
+    <li>[\1 -> 1 * 2, \2 -> 2 * 2, \3 -> 3 * 2]</li>
+    <li>[1 * 2, 2 * 2, 3 * 2]</li>
+    <li>[2, 4, 6]</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>It's about separating state</h2>
+  <ul>
+    <li>pure functions</li>
+    <ul><li>values</li></ul>
+    <li>impure functions</li>
+    <ul>
+      <li>mutation</li>
+      <li>IO</li>
+    </ul>
+  </ul>
+</section>
+
+<section class="slide">
+  <h1>What's the big deal?</h1>
+</section>
+
+<section class="slide">
+  <h2>Loose coupling / High cohesion</h2>
+  <h3>Isn't this what it's always about?</h3>
+</section>
+
+<section class="slide">
+  <h2>Referential Transparency</h2>
+  <h3>How much of the system do you need to have in your head to understand a subset of the code?</h3>
+</section>
+
+<section class="slide">
+  <h2>Generalization / Reuse </h2>
+  <blockquote>
+    <p>It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures.</p>
+    <cite>Alan Perlis</cite>
+  </blockquote>
+</section>
+
+<section class="slide">
+  <h1>Tips For Learning FP</h1>
+</section>
+
+<section class="slide">
+  <h2>Practice time</h2>
+  <ol>
+    <li>Make it work</li>
+    <li>Refactor for readability</li>
+    <li>Refactor for concision</li>
+    <li>Refactor for speed</li>
+    <li>Rewrite a completely different way</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2>Project time</h2>
+  <ol>
+    <li>Make it work</li>
+    <li>Refactor for readability</li>
+    <li>Refactor when you have a deeper understanding</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2>Learn the core functions</h2>
+  <ul>
+    <li><code>map</code></li>
+    <li><code>reduce</code></li>
+    <li>anonymous functions</li>
+    <li>collection libraries</li>
+    <li>recursion? - surprisingly rare</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Separate state and side effects</h2>
+  <ul>
+    <li>Functions that create data structures</li>
+    <li>Procedures that do IO</li>
+    <li>These two go a long way</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Ask for help</h2>
+  <ul>
+    <li>FP programmers are excited that you are interested!</li>
+    <li>FP languages have very strong idioms. Learn them.</li>
+    <li>FP languages often have performance pitfalls. Ask about them.</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Try them out in your environment</h2>
+  <ul>
+    <li>FP principles are not necessarily at odds with other paradigms</li>
+    <li>most languages support higher functions</li>
+    <li>most languages have higher order collection libraries</li>
+  </ul>
+</section>
+<section class="slide">
+  <h2>Be patient</h2>
+  <ul>
+    <li>FP isn't hard.  Learning something new is.</li>
+  </ul>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+        <span class="deck-status-current"></span>
+        /
+        <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+        <label for="goto-slide">Go to slide:</label>
+        <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+        <datalist id="goto-datalist"></datalist>
+        <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="jquery-1.7.2.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+        $(function() {
+                $.deck('.slide');
+        });
+</script>
+</body>
+</html>
